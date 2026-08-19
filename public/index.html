@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Task Manager</h1>
+    <p class="subtitle">Proyecto base — Maestría en Full Stack Development</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Nueva tarea</h2>
+      <form id="task-form">
+        <input type="text" id="title" placeholder="Título" required />
+        <textarea id="description" placeholder="Descripción (opcional)"></textarea>
+        <input type="date" id="dueDate" required />
+        <select id="assigneeId">
+          <option value="">Sin asignar</option>
+        </select>
+        <label class="checkbox">
+          <input type="checkbox" id="isUrgent" /> Urgente
+        </label>
+        <button type="submit">Crear tarea</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Tareas</h2>
+      <div class="filters">
+        <select id="filter-status">
+          <option value="">Todos los estados</option>
+          <option value="todo">Por hacer</option>
+          <option value="in_progress">En progreso</option>
+          <option value="done">Completadas</option>
+        </select>
+      </div>
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
